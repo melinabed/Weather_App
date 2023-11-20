@@ -1,13 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-</head>
-<body>
-    <div id="content"></div>
+  </head>
+  <body>
+    <div id="content">
+      <div class="header">
+        <h1>The Weather</h1>
+      </div>
+      <div class="search">
+        <input type="search" id="search" name="city-search" />
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="city"></div>
+      <div class="hourly"></div>
+      <div class="three-day"></div>
+    </div>
 
-<script src="main.js"></script> 
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
