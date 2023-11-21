@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+
+#main > .body {
+  flex: 1;
+}
+
+.header,
+.footer {
+  height: 20vh;
+  background-color: rgb(255, 199, 199);
+}
+
+.header,
+.body,
+.footer {
+  padding: 1em;
+}
