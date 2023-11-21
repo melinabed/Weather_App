@@ -1,7 +1,6 @@
-export async function citySearch() {
-  //Gets the user input and displays the selected info
-  const userInput = document.getElementById("search").value;
-  const city = document.querySelector(".city");
+export async function defaultWeather() {
+  console.log("load default weather");
+  const city = document.querySelector(".body");
   const cityName = document.createElement("h1");
   const cityTemp = document.createElement("div");
   cityTemp.setAttribute("id", "temp");
@@ -18,7 +17,7 @@ export async function citySearch() {
   highandLow.appendChild(low);
 
   const response = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=273b38d4a7de4dbbbbb10356231711&q=${userInput}&days=1&aqi=no&alerts=no`,
+    "https://api.weatherapi.com/v1/forecast.json?key=273b38d4a7de4dbbbbb10356231711&q=Houston&days=3&aqi=no&alerts=no",
     { mode: "cors" },
   );
   const weatherInfo = await response.json();
@@ -32,4 +31,12 @@ export async function citySearch() {
   low.textContent = `L: ${
     weatherInfo.forecast.forecastday[0].day.mintemp_f + "\u00B0"
   }`;
+}
+
+export function clearDefault() {
+  const weather = document.querySelectorAll(".body");
+  for (let i = 0; i < weather.length; i++) {
+    weather[i].remove();
+  }
+  document.getElementById("search-btn").reset();
 }
