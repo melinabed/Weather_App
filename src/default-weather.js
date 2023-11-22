@@ -24,13 +24,14 @@ export async function defaultWeather() {
   const weatherInfo = await response.json();
   console.log(weatherInfo);
   cityName.textContent = weatherInfo.location.name;
-  cityTemp.textContent = weatherInfo.current.temp_f + "\u00B0";
+  cityTemp.textContent = Math.round(weatherInfo.current.temp_f) + "\u00B0";
+
   condition.textContent = weatherInfo.current.condition.text;
   high.textContent = `H: ${
-    weatherInfo.forecast.forecastday[0].day.maxtemp_f + "\u00B0"
+    Math.round(weatherInfo.forecast.forecastday[0].day.maxtemp_f) + "\u00B0"
   }`;
   low.textContent = `L: ${
-    weatherInfo.forecast.forecastday[0].day.mintemp_f + "\u00B0"
+    Math.round(weatherInfo.forecast.forecastday[0].day.mintemp_f) + "\u00B0"
   }`;
 }
 

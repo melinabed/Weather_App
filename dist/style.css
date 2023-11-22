@@ -53,4 +53,11 @@ h1 {
 
 .hourly {
   display: flex;
+  height: auto;
+  width: 50vh;
+  overflow-x: scroll;
+  padding: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+  gap: 20px;
 }
