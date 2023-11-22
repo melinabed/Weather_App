@@ -50,3 +50,7 @@ h1 {
 .footer {
   padding: 1em;
 }
+
+.hourly {
+  display: flex;
+}
