@@ -9,6 +9,7 @@ export async function defaultWeather() {
   highandLow.setAttribute("class", "high-low");
   const high = document.createElement("p");
   const low = document.createElement("p");
+
   city.appendChild(cityName);
   city.appendChild(cityTemp);
   city.appendChild(condition);
@@ -38,5 +39,4 @@ export function clearDefault() {
   for (let i = 0; i < weather.length; i++) {
     weather[i].remove();
   }
-  document.getElementById("search-btn").reset();
 }
