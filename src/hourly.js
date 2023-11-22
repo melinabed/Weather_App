@@ -152,116 +152,125 @@ export async function getHourly() {
       .slice(11)
       .replace("23:00", "11 PM");
 
-  //Temperatures for each time div
+  //Temperatures for each hourly-time div
+
   const hourZeroTemp = document.createElement("div");
   hourZero.appendChild(hourZeroTemp);
-  hourZeroTemp.textContent = weatherInfo.forecast.forecastday[0].hour[0].temp_f;
+  hourZeroTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[0].temp_f) + "\u00B0";
 
   const hourOneTemp = document.createElement("div");
   hourOne.appendChild(hourOneTemp);
-  hourOneTemp.textContent = weatherInfo.forecast.forecastday[0].hour[1].temp_f;
+  hourOneTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[1].temp_f) + "\u00B0";
 
   const hourTwoTemp = document.createElement("div");
   hourTwo.appendChild(hourTwoTemp);
-  hourTwoTemp.textContent = weatherInfo.forecast.forecastday[0].hour[2].temp_f;
+  hourTwoTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[2].temp_f) + "\u00B0";
 
   const hourThreeTemp = document.createElement("div");
   hourThree.appendChild(hourThreeTemp);
   hourThreeTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[3].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[3].temp_f) + "\u00B0";
 
   const hourFourTemp = document.createElement("div");
   hourFour.appendChild(hourFourTemp);
-  hourFourTemp.textContent = weatherInfo.forecast.forecastday[0].hour[4].temp_f;
+  hourFourTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[4].temp_f) + "\u00B0";
 
   const hourFiveTemp = document.createElement("div");
   hourFive.appendChild(hourFiveTemp);
-  hourFiveTemp.textContent = weatherInfo.forecast.forecastday[0].hour[5].temp_f;
+  hourFiveTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[5].temp_f) + "\u00B0";
 
   const hourSixTemp = document.createElement("div");
   hourSix.appendChild(hourSixTemp);
-  hourSixTemp.textContent = weatherInfo.forecast.forecastday[0].hour[6].temp_f;
+  hourSixTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[6].temp_f) + "\u00B0";
 
   const hourSevenTemp = document.createElement("div");
   hourSeven.appendChild(hourSevenTemp);
   hourSevenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[7].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[7].temp_f) + "\u00B0";
 
   const hourEightTemp = document.createElement("div");
   hourEight.appendChild(hourEightTemp);
   hourEightTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[8].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[8].temp_f) + "\u00B0";
 
   const hourNineTemp = document.createElement("div");
   hourNine.appendChild(hourNineTemp);
-  hourNineTemp.textContent = weatherInfo.forecast.forecastday[0].hour[9].temp_f;
+  hourNineTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[9].temp_f) + "\u00B0";
 
   const hourTenTemp = document.createElement("div");
   hourTen.appendChild(hourTenTemp);
-  hourTenTemp.textContent = weatherInfo.forecast.forecastday[0].hour[10].temp_f;
+  hourTenTemp.textContent =
+    Math.round(weatherInfo.forecast.forecastday[0].hour[10].temp_f) + "\u00B0";
 
   const hourElevenTemp = document.createElement("div");
   hourEleven.appendChild(hourElevenTemp);
   hourElevenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[11].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[11].temp_f) + "\u00B0";
 
   const hourTwelveTemp = document.createElement("div");
   hourTwelve.appendChild(hourTwelveTemp);
   hourTwelveTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[12].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[12].temp_f) + "\u00B0";
 
   const hourThirteenTemp = document.createElement("div");
   hourThirteen.appendChild(hourThirteenTemp);
   hourThirteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[13].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[13].temp_f) + "\u00B0";
 
   const hourFourteenTemp = document.createElement("div");
   hourFourteen.appendChild(hourFourteenTemp);
   hourFourteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[14].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[14].temp_f) + "\u00B0";
 
   const hourFifthteenTemp = document.createElement("div");
   hourFifthteen.appendChild(hourFifthteenTemp);
   hourFifthteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[15].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[15].temp_f) + "\u00B0";
 
   const hourSixteenTemp = document.createElement("div");
   hourSixteen.appendChild(hourSixteenTemp);
   hourSixteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[16].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[16].temp_f) + "\u00B0";
 
   const hourSeventeenTemp = document.createElement("div");
   hourSeventeen.appendChild(hourSeventeenTemp);
   hourSeventeenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[17].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[17].temp_f) + "\u00B0";
 
   const hourEighteenTemp = document.createElement("div");
   hourEighteen.appendChild(hourEighteenTemp);
   hourEighteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[18].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[18].temp_f) + "\u00B0";
 
   const hourNineteenTemp = document.createElement("div");
   hourNineteen.appendChild(hourNineteenTemp);
   hourNineteenTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[19].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[19].temp_f) + "\u00B0";
 
   const hourTwentyTemp = document.createElement("div");
   hourTwenty.appendChild(hourTwentyTemp);
   hourTwentyTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[20].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[20].temp_f) + "\u00B0";
 
   const hourTwentyOneTemp = document.createElement("div");
   hourTwentyOne.appendChild(hourTwentyOneTemp);
   hourTwentyOneTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[21].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[21].temp_f) + "\u00B0";
 
   const hourTwentyTwoTemp = document.createElement("div");
   hourTwentyTwo.appendChild(hourTwentyTwoTemp);
   hourTwentyTwoTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[22].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[22].temp_f) + "\u00B0";
 
   const hourTwentyThreeTemp = document.createElement("div");
   hourTwentyThree.appendChild(hourTwentyThreeTemp);
   hourTwentyThreeTemp.textContent =
-    weatherInfo.forecast.forecastday[0].hour[23].temp_f;
+    Math.round(weatherInfo.forecast.forecastday[0].hour[23].temp_f) + "\u00B0";
 }

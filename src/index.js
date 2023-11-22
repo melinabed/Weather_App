@@ -2,7 +2,7 @@ import { citySearch } from "./city-search";
 import { defaultWeather, clearDefault } from "./default-weather";
 import { getHourly } from "./hourly";
 
-//Call the default weather on first land
+//Call the default weather and hourly-temps on first land
 defaultWeather();
 getHourly();
 
