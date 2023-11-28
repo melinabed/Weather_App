@@ -95,7 +95,8 @@ h1 {
   padding: 1em;
 }
 
-.hourly {
+.hourly,
+.city-hourly {
   display: flex;
   height: auto;
   width: 50vh;
