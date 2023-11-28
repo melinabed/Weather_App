@@ -1,9 +1,13 @@
 export async function defaultWeather() {
   console.log("load default weather");
+
   const city = document.querySelector(".body");
   const cityName = document.createElement("h1");
   const cityTemp = document.createElement("div");
   cityTemp.setAttribute("id", "temp");
+
+  const img = document.createElement("img");
+
   const condition = document.createElement("p");
   const highandLow = document.createElement("div");
   highandLow.setAttribute("class", "high-low");
@@ -12,6 +16,9 @@ export async function defaultWeather() {
 
   city.appendChild(cityName);
   city.appendChild(cityTemp);
+
+  city.appendChild(img);
+
   city.appendChild(condition);
   city.appendChild(highandLow);
   highandLow.appendChild(high);
@@ -23,8 +30,31 @@ export async function defaultWeather() {
   );
   const weatherInfo = await response.json();
   console.log(weatherInfo);
+
   cityName.textContent = weatherInfo.location.name;
   cityTemp.textContent = Math.round(weatherInfo.current.temp_f) + "\u00B0";
+
+  if (weatherInfo.current.condition.code == 1000) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/113.png";
+  } else if (weatherInfo.current.condition.code == 1003) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/116.png";
+  } else if (weatherInfo.current.condition.code == 1006) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/119.png";
+  } else if (weatherInfo.current.condition.code == 1009) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/122.png";
+  } else if (weatherInfo.current.condition.code == 1030) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/143.png";
+  } else if (weatherInfo.current.condition.code == 1117) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/230.png";
+  } else if (weatherInfo.current.condition.code == 1135) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/248.png";
+  } else if (weatherInfo.current.condition.code == 1183) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/296.png";
+  } else if (weatherInfo.current.condition.code == 1195) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/308.png";
+  } else if (weatherInfo.current.condition.code == 1153) {
+    img.src = "/home/melinabed/repos/Weather_App/src/day/266.png";
+  }
 
   condition.textContent = weatherInfo.current.condition.text;
   high.textContent = `H: ${
