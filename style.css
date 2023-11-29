@@ -82,6 +82,7 @@ h1 {
 }
 .city {
   justify-self: center;
+  margin-left: 50px;
 }
 
 .header,
